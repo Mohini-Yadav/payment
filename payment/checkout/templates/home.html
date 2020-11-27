@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <h1>Welcome to ADYEN Checkout!</h1>
+    <form class = "form" method="post" action="{% url 'checkout' %}" >
+            {% csrf_token %}
+          <button type="submit">Go to checkout page!</button>
+        </form>
+</head>
+<body>
+
+</body>
+</html>

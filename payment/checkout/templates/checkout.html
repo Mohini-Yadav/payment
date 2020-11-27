@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkout page</title>
+    <h1>checkout_page</h1>
+
+    <div class="container">
+    <h1>Here you submit checkout details</h1>
+
+        <form class = "form" method="post" action="{% url 'response' %}" >
+            {% csrf_token %}
+
+            <br>
+            <label for="Country Code">Country Code:</label>
+            <input type="text" value="{{ countrycode }}" name="Country Code" placeholder="eg. NL" id ="Country Code">
+            <br>
+            <label for="Amount">Amount:</label>
+            <input type="text" value="{{ amount }}" name="Amount" placeholder="eg. 1000" id ="Amount">
+            <br>
+            <label for="Currency">Currency:</label>
+            <input type="text" value="{{ currency }}" name="Currency" placeholder="eg. EUR" id ="Currency">
+            <br>
+            <label for="Channel">Channel:</label>
+            <input type="text" value="{{ channel }}" name="Channel" placeholder="eg. Web" id ="Channel">
+            <br>
+            <label for="shopperLocale">shopperLocale:</label>
+            <input type="text" value="{{ shopperLocale }}" name="shopperLocale" placeholder="eg. nl-NL" id ="shopperLocale">
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+</head>
+<body>
+
+</body>
+</html>
